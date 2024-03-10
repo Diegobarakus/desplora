@@ -1,0 +1,32 @@
+.isactive{
+    padding: 8px 12px;
+    font-weight: 600;
+    color: rgb(255, 0, 179) !important;
+    cursor: default;
+    text-decoration: none;
+}
+
+.noActive li{
+    padding: 8px 12px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.noActive li:hover{
+    padding: 8px 12px;
+    background-color: var(--grisHover);
+    font-weight: 600;
+    color: var(--negro);
+}
+
+
+.noActive{
+    color: var(--grisOscuro);
+    text-decoration: none;
+}
+
+
+
+.isactive2{
+    color: rgb(255, 0, 179) !important;
+}

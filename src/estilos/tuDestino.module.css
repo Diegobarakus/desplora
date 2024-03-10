@@ -1,0 +1,380 @@
+
+:root {
+    --grisHover: #dfdfdf;
+    --blanco: #ffffff;
+    --grisOscuro: #575757;
+    --grisClaro: #e4e4e4; 
+    --negro: #000000; 
+  }
+
+
+
+
+
+
+.portada{
+    height: 400px;
+    width: 100%;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    filter:saturate(0.7);
+    position: relative;
+    overflow: hidden;
+    filter: saturate(2);
+    border-radius: 5px;
+}
+
+.portada img{
+    width: 100%;
+    position: absolute;
+    top: -50%;
+    z-index: 0;
+}
+
+.galeria{
+    display: flex;
+    height: 220px;
+    width: 100%;
+    margin: 10px 0;
+    overflow-y: hidden;
+    overflow-x: scroll;
+
+}
+
+.galeria img{
+    margin: 10px;
+    margin-left: 0;
+    filter: saturate(1.1);
+    border-radius: 5px;
+}
+
+.galeria::-webkit-scrollbar {
+    height: 9px;
+    background-color: #d4d4d4;
+    border-radius: 10px;
+  }
+
+.galeria::-webkit-scrollbar-thumb {
+    background: #535353 !important;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+.portada h1{
+    width: 90%;
+    font-size: 2.5rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow:2px 2px 8px rgb(0, 0, 0);
+    z-index: 2;
+}
+
+.infoCiudad{
+    color: rgb(204, 204, 204);
+    font-size: 0.8rem;
+    width: 100%;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0;
+    padding: 20px 0;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); 
+    z-index: 2;
+}
+
+.infoCiudad p{
+    background-color: rgba(0, 0, 0, 0.719);
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+
+.textoPrincipal{
+    letter-spacing: 0.5px;
+    line-height: 30px;
+    font-size: 1.1rem;
+
+}
+
+.textoPrincipal p{
+    margin: 10px 0;
+}
+
+.alojamientoTitulo{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    
+}
+
+.iconStandard{
+    margin-right: 10px;
+}
+
+.recomendacionesTitulo{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.alojamientoTitulo .icon{
+    margin-right: 10px;
+}
+
+.textoPrincipal img{
+    height: 300px;
+    margin:  5px;
+    border-radius: 10px;
+}
+
+.paHacer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.contenedorPrincipal{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    background-color: #cccccc;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.151) 5px 2px 8px 2px;
+    width: 45%;
+    min-width: 500px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.contenedorFlex{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;    
+    width: 100%;
+}
+
+.paHacerImagen{
+    height: 130px;
+    width: 130px;
+    overflow: hidden;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paHacerImagen img{
+    width: 100%;
+}
+
+.paHacerInfo{
+    width: 65%;
+}
+
+.paHacerInfo p{
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.paHacerInfo h4{
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+
+.paHacerTexto{
+    width: 90%;
+    font-size: 0.9rem;
+}
+
+.paHacerPrecio{
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.divisa{
+    margin-left: 10px;
+    background-color: rgb(48, 48, 48);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+.paHacerContacto{
+    margin-top: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    font-size: 0.8rem;
+    width: 100%;
+    font-weight: 500;
+}
+
+.paHacerContacto p, .webBtn{
+    background-color: var(--grisClaro);
+    margin: 0 5px;
+    padding: 2px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+
+.publicado{
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.corazon{
+    margin: 0 8px;
+}
+
+.webBtn{
+    background-color: white;
+    padding: 2px 5px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.webBtn:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+
+
+
+
+@media (min-width: 600px) and (max-width: 900px){
+
+    .contenedorFlex{
+        width: 100%;
+    }
+
+    .paHacerImagen{
+        height: 120px;
+        width: 120px;
+    }
+
+    .paHacer{
+        justify-content: center;
+    }
+
+    .portada{
+        height: 250px;
+    }
+
+    .portada img{
+        top: -30%;
+    }
+
+}
+
+
+@media (max-width: 600px){
+
+    .portada{
+        height: 250px;
+    }
+
+    .portada img{
+        top: 0;
+    }
+
+    .galeria{
+        display: flex;
+        height: 200px;
+        width: 100%;
+        margin: 10px 0;
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
+
+    .galeria img{
+        margin-right: 10px;
+    
+    }
+
+    .paHacerImagen{
+        height: 100px;
+        width: 100px;
+        margin-bottom: 5px;
+    }
+
+
+    .contenedorPrincipal{
+        margin-bottom: 20px;
+        margin-right: 20px;
+        background-color: #cccccc;
+        border-radius: 30px;
+        box-shadow: rgba(0, 0, 0, 0.151) 5px 2px 8px 2px;
+        width: 100%;
+        min-width: 40px;
+        height: fit-content;
+        margin: 0 0 20px 0;
+        padding: 20px 2px;
+        border-radius: 5px;
+    }
+
+    .contenedorFlex{
+        width: 100%;
+    }
+
+    .paHacerInfo{
+        width: 90%;
+    }
+
+    .paHacer h4{
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .paHacer{
+        width: 100%;
+    }
+
+    .paHacerContacto p{
+        text-align: center;
+        margin: 0 10px;
+    }
+
+    .paHacerTexto{
+        width: 100%;
+        text-align: center;
+    }
+
+    .contenedorFlex{
+        flex-direction: column;
+    }
+
+    .paHacerPrecio{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+

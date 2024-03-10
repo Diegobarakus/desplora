@@ -1,0 +1,241 @@
+:root {
+    --grisHover: #dfdfdf;
+    --blanco: #ffffff;
+    --grisOscuro: #575757;
+    --grisClaro: #e4e4e4; 
+    --negro: #000000; 
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.contBusquedaIcon{
+    height: 34px;
+    color: black;
+}
+
+
+
+.headerContainer{
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    left: 30px;
+    z-index: 999;
+}
+
+.header{
+    width: 100%;
+    height: 100%;
+    background-color: var(--blanco);
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.37) 0px 2px 20px 2px;
+    z-index: 2;
+}
+
+.menuDesplegable{
+    height: 400px;
+    width: 100%;
+    background-color: red;
+    transform: translateY(-105%);
+    z-index: 1;
+    display: none;
+}
+
+.header ul{
+    width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+
+
+
+
+
+.logo{
+    height: 50%;
+    width: fit-content;
+}
+
+.logoIMG{
+    height: 100%;
+}
+
+
+.busqueda{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.busqueda input{
+    height: 34px;
+    width: 200px;
+    border-radius: 50px 0  0 50px;
+    text-align: center;
+    border: solid var(--grisOscuro) 2px;
+}
+
+.btnBusqueda{
+    height: 34px;
+    padding: 0 10px;
+    border-radius: 0 50px 50px 0;
+    border: solid var(--grisOscuro) 2px;
+    cursor: pointer;
+}
+
+.menuMobil{
+    display: none;
+    cursor: pointer;
+}
+
+
+
+@media (min-width: 600px) and (max-width: 900px){
+    .header{
+        width: 100%;
+        height: 100px;
+        background-color: var(--blanco);
+        color: rgb(0, 0, 0);
+        position: sticky;
+        top: 0;
+        left: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .busqueda input{
+        display: none;
+    }
+
+    .btnMenu{
+        display: none;
+    }
+
+    .btnBusqueda{
+        padding: 0;
+        border: none;
+        cursor: pointer;
+    }
+    
+}
+
+
+
+
+@media (max-width: 600px) {
+    .header{
+        width: 100%;
+        height: 100px;
+        background-color: var(--blanco);
+        color: rgb(0, 0, 0);
+        position: sticky;
+        top: 0;
+        left: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 8%;
+    }
+
+    .header ul{
+        display: none;
+        padding: 0;
+        margin: 0;
+        background-color: red;
+    }
+
+    .busqueda input{
+        display: none;
+    }
+    
+   
+
+    .busqueda{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-right: 50px;
+    }
+
+
+    .logo{
+        height: 40%;
+        width: fit-content;
+        margin-right: 35px;
+    }
+
+    .btnBusqueda{
+        margin-left: 35px;
+    }
+
+
+    .menuMobil{
+        display: block;
+        cursor: pointer;
+    }
+
+    .btnBusqueda{
+        
+        padding: 0;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menuDesplegable{
+        font-family: Arial, Helvetica, sans-serif;
+        height: 300px;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        transform: translateY(-105%);
+        z-index: 1;
+        display: block;
+        box-shadow: rgba(0, 0, 0, 0.37) 0px 2px 20px 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: 1s ease;
+    }
+
+    .menuDesplegable ul{
+        display: flex;
+        height: 70%;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        list-style: none;
+    }
+
+    .menuDesplegable li{
+        padding: 8px 12px;
+        border-radius: 50px;
+    }
+    
+    .menuDesplegable li:hover{
+        background-color: var(--grisHover);
+        font-weight: 600;
+        color: var(--negro);
+    }
+    
+    .menuDesplegable a{
+        color: var(--grisOscuro);
+        text-decoration: none;
+    }
+}

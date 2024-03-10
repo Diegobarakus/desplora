@@ -1,0 +1,51 @@
+:root {
+    --grisHover: #d6d6d6;
+    --blanco: #ffffff;
+    --grisOscuro: #575757;
+    --grisClaro: #f5f5f5; 
+  }
+
+  @font-face {
+    font-family: 'MiFuente';
+    src: url('./7Auwp_0qiz-afTLGLQ.woff2') format('woff2');
+  }
+
+  *{
+    font-family: 'MiFuente', sans-serif !important;
+}
+
+
+
+.App{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+    background-color: var(--grisClaro);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.AppContent{
+    width: 80%;
+    height: 100%;
+    min-height: 100vh;
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
+
+@media (max-width: 600px){
+    
+    
+    .AppContent{
+        width: 92%;
+        height: 100%;
+        padding-top: 0px;
+    }
+
+}
+
+

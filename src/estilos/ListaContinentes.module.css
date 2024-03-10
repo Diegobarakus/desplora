@@ -1,0 +1,40 @@
+:root {
+    --grisHover: #dfdfdf;
+    --blanco: #ffffff;
+    --grisOscuro: #575757;
+    --grisClaro: #e4e4e4; 
+    --negro: #000000; 
+    --activeMenu: rgb(255, 0, 106);
+  }
+
+
+
+
+.element ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    background-color: #ebebeb;
+    border-radius: 50px;
+    padding: 5px 0;
+
+}
+
+.element a{
+    color: var(--grisOscuro);
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.element a:hover{
+    color: var(--negro);
+    text-decoration: none;
+    background-color: var(--grisHover);
+    padding: 5px 10px;
+    border-radius: 50px;
+}

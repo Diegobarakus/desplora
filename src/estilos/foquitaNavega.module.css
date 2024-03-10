@@ -1,0 +1,51 @@
+.contenedor{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box{
+    height: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flecha{
+    cursor: pointer;
+
+}
+
+.inputBusqueda{
+    height: 40px;
+    width: 100%;
+    border-radius: 50px;;
+    text-align: center;
+    border: solid var(--grisOscuro) 2px;
+    display: none;
+}
+
+.inputLink{
+    width: 50%; 
+    text-decoration: none;
+}
+
+@media (max-width: 900px){
+    .inputBusqueda{
+        display: block;
+        width: 100%;
+    }
+
+    .inputLink{
+        width: 80%; 
+        text-decoration: none;
+    }
+
+    .box{
+        height: 70%;
+    }
+}
+
