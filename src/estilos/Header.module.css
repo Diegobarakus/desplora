@@ -1,10 +1,7 @@
-:root {
-    --grisHover: #dfdfdf;
-    --blanco: #ffffff;
-    --grisOscuro: #575757;
-    --grisClaro: #e4e4e4; 
-    --negro: #000000; 
-  }
+@import url("../ColoresPagina.css");
+
+
+
 
 *{
     margin: 0;
@@ -15,8 +12,91 @@
 
 .contBusquedaIcon{
     height: 34px;
-    color: black;
 }
+
+
+.darkmodeLight{
+    height: 30px;
+    width: 60px;
+    border-radius: 100px;
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.801);
+    background-color: rgb(103, 150, 194);
+    margin-left: 35px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+}
+
+.darkmodeDark{
+    height: 30px;
+    width: 60px;
+    border-radius: 100px;
+    box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.801);
+    background-color: rgb(92, 100, 129);
+    margin-left: 35px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+}
+
+
+
+.darkmodeCircleLight{
+    height: 90%;
+    aspect-ratio: 1/1;
+    background-color: var(--iconsLight);
+    border-radius: 100px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.801);
+    transition: 0.6s;
+    margin-left: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    
+}
+
+.darkmodeCircleDark{
+
+    height: 90%;
+    aspect-ratio: 1/1;
+    border-radius: 100px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.801);
+    transition: 0.6s;
+    margin-left: 50%;
+    background-color: var(--menuBackgroundLight);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.stars{
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    z-index: 0;
+    transition: 0.5s;
+}
+
+.cloud{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 0;
+    transition: 0.5s;
+}
+
+
+
+
+
 
 
 
@@ -29,11 +109,12 @@
     z-index: 999;
 }
 
+
 .header{
     width: 100%;
     height: 100%;
-    background-color: var(--blanco);
-    color: rgb(0, 0, 0);
+    background-color: var(--menuBackgroundLight) ;
+    color: var(--menuTextoLight);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,28 +126,45 @@
 .menuDesplegable{
     height: 400px;
     width: 100%;
-    background-color: red;
     transform: translateY(-105%);
     z-index: 1;
     display: none;
 }
 
+.menuDesplegable li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuDesplegable li p{
+    margin-left: 7px;
+}
+
+
 .header ul{
-    width: 500px;
+    width: 60%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
 }
 
+.header li{
+    text-wrap: nowrap;
+    display: flex;
+    align-items: center;
+}
 
-
-
+.header li p{
+    margin-left: 5px;
+}
 
 
 .logo{
-    height: 50%;
+    height: 40%;
     width: fit-content;
+    margin-right: 10px;
 }
 
 .logoIMG{
@@ -86,15 +184,18 @@
     width: 200px;
     border-radius: 50px 0  0 50px;
     text-align: center;
-    border: solid var(--grisOscuro) 2px;
+    border: solid var(--sucheLigth) 2px;
+    background-color: var(--azulLight);
+    color: white;
 }
 
 .btnBusqueda{
     height: 34px;
     padding: 0 10px;
     border-radius: 0 50px 50px 0;
-    border: solid var(--grisOscuro) 2px;
+    border: solid var(--sucheLigth) 2px;
     cursor: pointer;
+    color: var(--sucheLigth);
 }
 
 .menuMobil{
@@ -108,15 +209,12 @@
     .header{
         width: 100%;
         height: 100px;
-        background-color: var(--blanco);
-        color: rgb(0, 0, 0);
         position: sticky;
         top: 0;
         left: 30px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     .busqueda input{
@@ -132,18 +230,24 @@
         border: none;
         cursor: pointer;
     }
+
+    .header ul{
+        width: 70%;
+    }
+
+    .logo{
+        height: 35%;
+    }
     
 }
 
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .header{
         width: 100%;
         height: 100px;
-        background-color: var(--blanco);
-        color: rgb(0, 0, 0);
         position: sticky;
         top: 0;
         left: 30px;
@@ -158,7 +262,6 @@
         display: none;
         padding: 0;
         margin: 0;
-        background-color: red;
     }
 
     .busqueda input{
@@ -182,7 +285,7 @@
     }
 
     .btnBusqueda{
-        margin-left: 35px;
+        margin-left: 50px;
     }
 
 
@@ -202,7 +305,8 @@
         font-family: Arial, Helvetica, sans-serif;
         height: 300px;
         width: 100%;
-        background-color: rgb(255, 255, 255);
+        background-color: var(--menuBackgroundLight);
+        color: var(--menuTextoLight);
         transform: translateY(-105%);
         z-index: 1;
         display: block;
@@ -229,13 +333,13 @@
     }
     
     .menuDesplegable li:hover{
-        background-color: var(--grisHover);
+        background-color: var(--hoverBackgroundLight);
         font-weight: 600;
         color: var(--negro);
     }
     
     .menuDesplegable a{
-        color: var(--grisOscuro);
+        color: var(--menuTextoLight);
         text-decoration: none;
     }
 }

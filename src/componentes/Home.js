@@ -31,18 +31,20 @@ function Home(){
 
       <div className={home.portada}>
       <h1 className={home.tituloPrincipal}>DES<span style={{opacity: "0.4"}}>CUBRE & EX</span>PLORA</h1>
-      <h2>Te contamos todo sobre tu proximo destino</h2>
+      <h2>Te contamos todo sobre tu próximo destino</h2>
       <img title='portada desplora.com' alt='Avion para volar con desplorando' src="https://desplora.com/medien/desplora portada.jpg" className={home.fondoImagenPortada}/>
       </div>
 
-      <div className={home.contenido}>
-      <p>Viajar es una actividad enriquesedora y emocionante, y si planeas vien tus viajes podras
-        disfrutarlos aun mas. En este blog te contamos todo sobre los destinos mas populares, los
-        cuales son elegidos por su belleza, su historia y su cultura. Tambien te daremos consejos.
+      <div className={`${seleccion.modus ? home.contenido : home.contenidoDark}`}>
+      <p> Viajar es una actividad enriquecedora y emocionante y si planeas bien tus viajes, podrás disfrutarlos al máximo. <br/>
+      En Desplora te contamos todo sobre tu próximo destino, desde los mejores lugares para visitar, hasta los mejores precios en alojamiento y transporte.
+      <br/>
+      <br/>
+      Si tienes un destino en mente, puedes buscarlo en la barra de navegación o si no sabes a donde ir, te recomendamos algunos destinos que te podrían interesar.   
       </p>
       </div>
 
-      <h3 className={home.tituloIcono}><FaPlaneDeparture className={home.iconStandard} /> Destinos que te podrian interesar</h3>
+      <h3 className={`${seleccion.modus ? home.tituloIcono : home.tituloIconoDark}`}><FaPlaneDeparture className={home.iconStandard} /> Destinos que te podrian interesar</h3>
       <br/>
 
       {!seleccion.continente?

@@ -25,7 +25,7 @@ const ListaContinentes = () => {
 
     return (
 
-        <div className={continentes.element}>
+        <div className={`${seleccion.modus ? continentes.element : continentes.elementDark}`}>
             <ul>
                 {/* Iterar sobre la lista de continentes y mostrar cada uno */}
                 {listaContinentes.map((continente, index) => (

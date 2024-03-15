@@ -5,8 +5,13 @@ import busquedaStyle from '../estilos/busqueda.module.css'
 
 function Busqueda(){
 
-    const seleccion = useSelector((state) => state.counter.parametrosDeBusqueda);
     
+
+    const seleccion = useSelector((state) => state.counter.parametrosDeBusqueda);
+    let modus = seleccion.modus;
+
+
+
     let filtrados = seleccion.contenido.
     filter( item => item.titulo.toLowerCase().includes(seleccion.busquedaActual.toLowerCase())
      || item.pais.toLowerCase().includes(seleccion.busquedaActual.toLowerCase())
@@ -14,7 +19,7 @@ function Busqueda(){
 
     return (
         <>
-        <h3 className={busquedaStyle.resultadoTexto}>Resultados para: {seleccion.busquedaActual}</h3>
+        <h3 className={`${modus ? busquedaStyle.resultadoTexto : busquedaStyle.resultadoTextoDark}`}>Resultados para: {seleccion.busquedaActual}</h3>
         <div className={busquedaStyle.riel}>
             {filtrados.map((ciudad, index)=>(
               <NavLink to={`/destinos/${ciudad.id}`} className={busquedaStyle.navlink} key={ ciudad + index}>

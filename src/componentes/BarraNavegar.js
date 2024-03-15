@@ -24,11 +24,13 @@ function FoquitaNavega(){
 
     return(
         <div className={foquiNavega.contenedor}>
-            <div className={foquiNavega.box}><FaRegArrowAltCircleLeft onClick={goBack} className={foquiNavega.flecha} size={40} color='#575757' /></div>
+            <div className={foquiNavega.box}></div>
+
             <Link className={foquiNavega.inputLink} to="/busqueda">
-            <input onChange={handleChange} className={foquiNavega.inputBusqueda} placeholder='Qué estás buscando?' type='text' />
+            <input onChange={handleChange} className={foquiNavega.inputBusqueda} placeholder='Busca tu próximo destino' type='text' />
             </Link>
-            <div className={foquiNavega.box}><FaRegArrowAltCircleRight onClick={goBack} className={foquiNavega.flecha} size={40} color='#575757' /></div>
+            
+            <div className={foquiNavega.box}></div>
         </div>
     )
 }

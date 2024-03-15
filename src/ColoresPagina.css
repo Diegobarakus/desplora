@@ -1,0 +1,39 @@
+:root {
+    --titulosLight: #ffffff;
+    --hoverBackgroundLight: #7184c26c;
+    --backgroundLight: #b4c1ce;
+    --grisLight: #e7e7e7;
+    --grisClaroLight: #26272e; 
+    --azulLight:rgb(40, 99, 226);
+    --amarilloLight: rgb(255, 196, 0);
+    --textosLight: rgb(27, 27, 27);
+
+    --menuTextoLight: rgb(218, 218, 218);
+    --menuBackgroundLight: #192446;
+    --sucheLigth: #ffae00;
+    --avtiveMenuLight:  #ffae00;
+    --iconsLight: #ffae00;
+    --subTituloLight: #002ba0;
+
+    
+
+
+
+
+
+
+
+    --hoverBackgroundDark: #878c9c;
+    --backgroundDark: #22252c;
+    --grisOscuroDark: #cccccc;
+    --grisClaroDark: #26272e; 
+    --negroDark: #f1f1f1;
+    --blancoDark: rgb(255, 255, 255); 
+    --azulDark:rgb(40, 99, 226);
+    --amarilloDark: rgb(255, 196, 0);
+    --textosDark: rgb(255, 233, 205);
+    --subTituloDark: #0084ff;
+    --iconsDark: #ffae00;
+  }
+
+

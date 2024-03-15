@@ -9,6 +9,7 @@ const initialState = {
         id:"",
         busquedaActual: "",
         contenido: [],
+        modus: true,
     }
 }
 
@@ -35,9 +36,12 @@ export const busquedaSlice = createSlice({
         addContenido: (state, action) => {
             state.parametrosDeBusqueda.contenido = action.payload
         },
+        changeModus: (state) => {
+            state.parametrosDeBusqueda.modus = !state.parametrosDeBusqueda.modus
+        }
 
     }
 })
 
-export const { addContinente, addPais, addCiudad, addId, addBusqueda, addContenido } = busquedaSlice.actions;
+export const { addContinente, addPais, addCiudad, addId, addBusqueda, addContenido, changeModus } = busquedaSlice.actions;
 export default busquedaSlice.reducer;

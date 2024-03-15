@@ -1,20 +1,27 @@
+@import url("../ColoresPagina.css");
+
+
+
+
 .isactive{
     padding: 8px 12px;
     font-weight: 600;
-    color: rgb(255, 0, 179) !important;
+    color: var(--avtiveMenuLight);
     cursor: default;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 .noActive li{
     padding: 8px 12px;
     border-radius: 50px;
     font-weight: 600;
+    transition: 0.3s;
 }
 
 .noActive li:hover{
     padding: 8px 12px;
-    background-color: var(--grisHover);
+    background-color: var(--hoverBackgroundLight);
     font-weight: 600;
     color: var(--negro);
 }
@@ -28,5 +35,5 @@
 
 
 .isactive2{
-    color: rgb(255, 0, 179) !important;
+    color: var(--azul);
 }

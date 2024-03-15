@@ -1,17 +1,19 @@
+@import url("../ColoresPagina.css");
+
+
+
+
 .contenedor{
     height: 80px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 5;
 }
 
 .box{
     height: 100%;
-    aspect-ratio: 1/1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .flecha{
@@ -24,18 +26,25 @@
     width: 100%;
     border-radius: 50px;;
     text-align: center;
-    border: solid var(--grisOscuro) 2px;
-    display: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: var(--grisLight);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.596);
 }
 
 .inputLink{
-    width: 50%; 
+    width: 90%; 
     text-decoration: none;
 }
 
 @media (max-width: 900px){
+    .contenedor{
+        display: flex;
+    }
+
     .inputBusqueda{
-        display: block;
         width: 100%;
     }
 

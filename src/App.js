@@ -10,14 +10,28 @@ import Style from './Style.module.css'
 import TuDestino from './pages/TuDestino'
 import FoquitaNavega from './componentes/BarraNavegar'
 import Footer from './componentes/Footer'
+import Palmera from './componentes/moduloVisual'
 
 //paginas
 import Destinos from './pages/Destinos'
 import Busqueda from './pages/Busqueda'
+import PageNotFound from './pages/PageNotFound';
+import VidaEnAlemania from './pages/VidaEnAlemania'
+import SobreNosotros from './pages/SobreNosotros'
 
 //store
 import { useSelector, useDispatch } from "react-redux";
 import { addContenido } from "./data/operaciones";
+
+//icons
+import { FaHome } from "react-icons/fa";
+import { MdOutlineTravelExplore } from "react-icons/md";
+import { GiPretzel } from "react-icons/gi";
+import { FaHeart } from "react-icons/fa6";
+
+
+
+
 
 function AboutMe(){
   return(<>h</>)
@@ -29,6 +43,7 @@ function App() {
 
         const seleccion = useSelector((state) => state.counter.parametrosDeBusqueda);
         const dispatch = useDispatch();
+        const modus = seleccion.modus;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -55,26 +70,29 @@ function App() {
   const arrPaginasPrincipales = [
     { name: "Home",
       url: "/",
-      element: <Home/>
+      icon: <FaHome size={20}/>
     },
     { name: "Destinos",
       url: "/destinos",
-      element: <Destinos/>
+      icon: <MdOutlineTravelExplore size={20} />
     },
     { name: "Vida en Alemania",
-      url: "/galeria",
-      element: <Home/>
+      url: "/vidaenlemania",
+      icon: <GiPretzel size={20} />
     },
     { name: "Sobre nosotros",
-      url: "/nosotros",
-      element: <AboutMe/>
+      url: "/sobrenosotros",
+      icon: <FaHeart size={20} />
     }
   ]
 
+  
+
   return (
     
-   <div className={Style.App}>
+   <div className={`${modus ? Style.App : Style.AppDark}`}>
     <Header paginasPrincipales={arrPaginasPrincipales}/>
+    <Palmera/>
     <div className={Style.AppContent}>
       <FoquitaNavega/>
     <Routes>
@@ -83,11 +101,15 @@ function App() {
         <Route path='/destinos/:pathPais' element={<TuDestino/>}/>
         <Route path='/Projects' element={<Home/>} />
         <Route path='/busqueda' element={<Busqueda/>}/>
+        <Route path='/vidaenlemania' element={<VidaEnAlemania/>} />
+        <Route path='/sobrenosotros' element={<SobreNosotros/>} />
 
-        <Route path='*' element={<h1>404 foquita no encuentra la pagina</h1>} />
+        <Route path='*' element={<PageNotFound />} />
     </Routes>
     </div>
     <Footer />
+
+    
    </div>
   );
 }

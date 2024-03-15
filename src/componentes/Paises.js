@@ -29,7 +29,7 @@ function Paises(){
     
    
     return(
-      <>
+      <div className={`${seleccion.modus? paisesStyle.light : paisesStyle.dark}`}>
 
       {seleccion.continente.length > 1 && seleccion.pais.length < 1? 
       <div className={paisesStyle.descubrecon}><h3>Qué País llama tu atencion?</h3></div> :
@@ -52,7 +52,7 @@ function Paises(){
         ))}
       </div>
       <Ciudades/>
-      </>
+      </div>
       
 
     )

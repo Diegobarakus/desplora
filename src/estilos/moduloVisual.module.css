@@ -1,0 +1,87 @@
+.light{
+    height: 300px;
+    position: absolute;
+    top: 90px;
+    right: 0px;
+    z-index: 0;
+    opacity: 0.4;
+}
+
+
+.palmera{
+    position: absolute;
+    height: 100%;
+    transform: rotate(30deg);
+    transform-origin: top ;
+    animation: animacionPalmera 50s infinite ease;
+    filter: hue-rotate(60deg) brightness(0.5);
+}
+
+.palmera1{
+    position: absolute;
+    height: 100%;
+    transform: rotate(60deg);
+    transform-origin: top ;
+    animation: animacionPalmera1 50s infinite ease;
+    filter: hue-rotate(55deg) brightness(0.7) saturate(0.6);
+}
+
+.palmera2{
+    position: absolute;
+    height: 80%;
+    transform: rotate(85deg);
+    transform-origin: top ;
+    animation: animacionPalmera2 50s infinite ease;
+    filter: hue-rotate(55deg) brightness(1) saturate(0.6);
+}
+
+@keyframes animacionPalmera{
+    0%{ transform: rotate(30deg);}
+    10%{transform: rotate(30deg);}
+    20%{transform: rotate(40deg);}
+    30%{transform: rotate(30deg);}
+    40%{transform: rotate(30deg);}
+    50%{transform: rotate(50deg);}
+    60%{transform: rotate(30deg);}
+    70%{transform: rotate(30deg);}
+    80%{transform: rotate(40deg);}
+    100%{transform: rotate(30deg);}
+   
+}
+
+@keyframes animacionPalmera1{
+    0%{ transform: rotate(60deg);}
+    10%{transform: rotate(70deg);}
+    20%{transform: rotate(60deg);}
+    30%{transform: rotate(60deg);}
+    40%{transform: rotate(70deg);}
+    50%{transform: rotate(60deg);}
+    60%{transform: rotate(60deg);}
+    70%{transform: rotate(70deg);}
+    80%{transform: rotate(60deg);}
+    100%{transform: rotate(60deg);}
+   
+}
+
+@keyframes animacionPalmera2{
+    0%{ transform: rotate(85deg);}
+    10%{transform: rotate(80deg);}
+    20%{transform: rotate(85deg);}
+    30%{transform: rotate(80deg);}
+    40%{transform: rotate(85deg);}
+    50%{transform: rotate(80deg);}
+    60%{transform: rotate(85deg);}
+    70%{transform: rotate(80deg);}
+    80%{transform: rotate(85deg);}
+    100%{transform: rotate(85deg);}
+   
+}
+
+@media (max-width: 700px){
+
+    .light{
+        display: none;
+    }
+    
+}
+
